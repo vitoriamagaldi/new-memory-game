@@ -1,0 +1,99 @@
+::selection{
+    background-color: #333;
+    color: aliceblue;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+.bg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-image: url(images/bg.jpg);
+    opacity: 0.7;
+    background-size: cover;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: auto;
+    max-width: 800px; width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.382);
+    max-height: 97vh;
+    z-index: 1000;
+}
+.card{
+    width: 100%;
+    height: 140px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .4s ease;
+}
+.view{
+    width: 100%; height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgb(2, 9, 2);
+    border-radius: 7px;
+}
+.front-view{
+    transform: rotateY(180deg);
+}
+.back-view{
+    background-image: url(images/back.png);
+    backface-visibility: hidden;
+}
+.reveal-card{
+    transform: rotateY(180deg);
+}
+.disabled-card{
+    opacity: 0.8;
+    filter: saturate(0.7);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+.timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+}
+.timer h2{
+    font-size: 1.3em;
+    color: #333;
+}
+.timer h1{
+    font-size: 2.5em;
+    color: #333;
+}
+.placar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+}
+.placar h2{
+    font-size: 1.3em;
+    color: #333;
+}
+.placar h1{
+    font-size: 2.5em;
+    color: #333;
+}
